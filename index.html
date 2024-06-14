@@ -66,8 +66,98 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6" style="background-color: #fd7338; color: black;">
                         <div class="home-content home-heading">
-                            <h1 class="text-gradiant fw-bold" style="padding-top: 100px; text-transform: capitalize; font-weight: 900;">Unik is a P2E project</span>
-                                build on stack ecosystem.</h1>
+                            <h2 class="animated-text">
+                                <span>Unik</span>
+                                <span>is</span>
+                                <span>a</span>
+                                <span>P2E</span>
+                                <span>project</span>
+                                <span>built</span>
+                                <span>on</span>
+                                <span>stack</span>
+                                <span>ecosystem.</span>
+                            </h2>
+                            <style>
+                                .animated-text {
+                                    font-size: 2rem;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    padding: 20px 0;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    padding-top: 120px;
+                                }
+                        
+                                .animated-text span {
+                                    opacity: 0;
+                                    position: relative;
+                                    display: inline-block;
+                                    margin: 5px 0;
+                                    animation: fadeIn 1s ease forwards;
+                                }
+                        
+                                .animated-text span::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -5px; 
+                                    width: 0;
+                                    height: 2px;
+                                    background: #0129ca; 
+                                    animation: underline 1s ease forwards;
+                                    animation-delay: inherit;
+                                }
+                        
+                                .animated-text span:nth-child(1) {
+                                    animation-delay: 0s;
+                                }
+                                .animated-text span:nth-child(2) {
+                                    animation-delay: 0.5s;
+                                }
+                                .animated-text span:nth-child(3) {
+                                    animation-delay: 1s;
+                                }
+                                .animated-text span:nth-child(4) {
+                                    animation-delay: 1.5s;
+                                }
+                                .animated-text span:nth-child(5) {
+                                    animation-delay: 2s;
+                                }
+                                .animated-text span:nth-child(6) {
+                                    animation-delay: 2.5s;
+                                }
+                                .animated-text span:nth-child(7) {
+                                    animation-delay: 3s;
+                                }
+                                .animated-text span:nth-child(8) {
+                                    animation-delay: 3.5s;
+                                }
+                                .animated-text span:nth-child(9) {
+                                    animation-delay: 4s;
+                                }
+                        
+                                @keyframes fadeIn {
+                                    from {
+                                        opacity: 0;
+                                        transform: translateY(20px);
+                                    }
+                                    to {
+                                        opacity: 1;
+                                        transform: translateY(0);
+                                    }
+                                }
+                        
+                                @keyframes underline {
+                                    from {
+                                        width: 0;
+                                    }
+                                    to {
+                                        width: 100%;
+                                    }
+                                }
+                            </style>
                             <figcaption>UNIK is an innovative project launched on the Stack blockchain, designed to offer everyone, whether within or outside the Stack ecosystem, the opportunity to participate in a unique play-to-earn (P2E) game. Our game is deeply integrated with non-fungible tokens (NFTs), providing rewards to every participant. By leveraging the robust capabilities of Stack, UNIK aims to create an engaging and rewarding experience for all users.
                             </figcaption>
                             <button style="margin-top: 30px; background-color: black; padding: 10px 20px; border-radius: 10px;" ><a href="./white.html" style="text-decoration: none; color: white; border: none; ">Explore</a></button>
@@ -307,50 +397,6 @@
                         <h6 class="text-gradiant fw-bold" style="padding-top: 30px;">NFT Collection</h6>
                         <h2 class="fw-bold">Collect And Connect NFT Project.</h2>
                         <figcaption>Central to our project is the development of a groundbreaking game where NFTs serve as our game characters and token as earnings and in-game purchases and many more. Each NFT possesses unique powers and abilities that influence gameplay, making the game not only entertaining but also strategically engaging. Our P2E game is designed to reward players through allocated token airdrops, offering a lucrative incentive to participate even before the mainnet allocation is launched.</figcaption>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row">
-                            <div class=" pt-4">
-                                <div class="service-box">
-                                    <div class="avatar-sm bg-soft-primary">
-                                        <i style="justify-content: center; text-align: center; display: flex; padding-top: 10px;" class="mdi mdi-wallet  f-20 text-primary"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="pb-2 fw-bold">Digital Wallet</h6>
-                                        <p>UNIK's digital wallet empowers users to store, manage, and utilize their unique digital assets and NFTs securely, enabling seamless transactions and gameplay within the Collect and Connect Project.</p>
-                                    </div>
-                                </div>
-                                <div class="service-box">
-                                    <div class="avatar-sm bg-soft-success">
-                                        <i style="justify-content: center; text-align: center; display: flex; padding-top: 10px;" class="mdi mdi-checkerboard f-20 text-success"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="pb-2 fw-bold">Security</h6>
-                                        <p>UNIK Project prioritizes security with Stack blockchain, encryption, biometric authentication, regular audits, and industry compliance, ensuring a safe and trustworthy experience for users' digital assets and NFTs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col pt-4">
-                                <div class="service-box">
-                                    <div class="avatar-sm bg-soft-blue pb-4">
-                                        <i style="justify-content: center; text-align: center; display: flex; padding-top: 10px;" class="mdi mdi-collage f-20 text-black"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="pb-2 fw-bold">Accessibility</h6>
-                                        <p>UNIK Project ensures accessibility through a user-friendly interface, mobile optimization, and cross-platform compatibility, making it easy for everyone to buy, sell, and manage digital assets and NFTs.</p>
-                                    </div>
-                                </div>
-                                <div class="service-box pt-5">
-                                    <div class="avatar-sm bg-soft-warning pb-4">
-                                        <i style="justify-content: center; text-align: center; display: flex; padding-top: 10px;" class="mdi mdi-security f-20 text-warning"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h6 class="pb-2 fw-bold">Safe</h6>
-                                        <p>UNIK Project ensures safety through robust Stack blockchain technology, secure encryption, and regular security audits, protecting users' digital assets and NFTs from fraud, hacking, and unauthorized access.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
     
