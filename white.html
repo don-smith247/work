@@ -3,253 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNIK Whitepaper</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
-            text-decoration: none;
-        }
-         a{
-            text-decoration: none;
-            color: #333;
-         }
-        header {
-            background: #fd7338;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        section {
-            padding: 2rem;
-            margin: 1rem auto;
-            max-width: 800px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            color: #fd7338;
-            border-bottom: 2px solid #fd7338;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        section h3 {
-            color: #333;
-            margin-top: 1.5rem;
-            font-size: 1.25rem;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #f4f4f4;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            border-left: 4px solid #fd7338;
-        }
-
-        footer {
-            background: #fd7338;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 0.9rem;
-            }
-
-            header h1 {
-                font-size: 1.75rem;
-            }
-
-            section {
-                padding: 1rem;
-                margin: 0.5rem;
-            }
-
-            section h2 {
-                font-size: 1.25rem;
-            }
-
-            section h3 {
-                font-size: 1.1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 0.8rem;
-            }
-
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            section {
-                padding: 0.5rem;
-                margin: 0.5rem;
-            }
-
-            section h2 {
-                font-size: 1.1rem;
-            }
-
-            section h3 {
-                font-size: 1rem;
-            }
-
-            ul li {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fd7338;
+        padding-top: 50px;
+    }
+
+    .flowchart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .step {
+        position: relative;
+        margin: 20px 0;
+    }
+
+    .step img {
+        width: 350px;
+        height: 300px;
+        border: 2px solid #000;
+        border-radius: 5px;
+    }
+
+    .arrow {
+        width: 10px; 
+        height: 50px;
+        background-color: #000;
+        position: relative;
+        margin: 10px 0;
+    }
+
+    .arrow::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: -5px; 
+        border-width: 10px; 
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+    }
+
+    .hidden {
+        opacity: 0;
+    }
+    h1 {
+            font-size: 28px;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            animation: fadeInUp 1s ease forwards;
+            font-weight: 800;
+            font-family: "PT Serif", serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 2px;
+          
+        }
+    
+    @media (max-width: 768px) {
+        .step img {
+            width: 300px;
+            height: 300px;
+        }
+
+        .arrow {
+            width: 8px;
+            height: 40px;
+        }
+
+        .arrow::after {
+            bottom: -15px;
+            left: -4px; 
+            border-width: 8px; 
+        }
+    }
+    a{
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "PT Serif", serif;;
+    }
+
+</style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand logo text-dark fw-bold" href="index.html">
-                <h2><span style="color: #fd7338;">UN</span><span>IK.</span></h2>
-            </a>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#introduction">Introduction</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#mission-vision">Mission & Vision</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nft-token-utility">NFT & Token Utility</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#tokenomics">Tokenomics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#roadmap">Roadmap</a>
-                    </li>
-                </ul>
-            </div>
+    <a href="./index.html">Home</a>
+    <h1 >unik <span style="color: white;">white</span> paper</h1>
+    <div class="flowchart">
+        <div class="step hidden" id="step1">
+            <img src="img-1.jpg" alt="">
         </div>
-    </nav>
-    <header>
-        <h1>UNIK Whitepaper</h1>
-    </header>
-    <section id="introduction">
-        <h2>Introduction to UNIK</h2>
-        <p>UNIK is an innovative project launched on the Stack blockchain, designed to offer everyone, whether within or outside the Stack ecosystem, the opportunity to participate in a unique play-to-earn (P2E) game. Our game is deeply integrated with non-fungible tokens (NFTs), providing rewards to every participant. By leveraging the robust capabilities of Stack, UNIK aims to create an engaging and rewarding experience for all users.</p>
-    </section>
-    <section id="mission-vision">
-        <h2>Mission and Vision</h2>
-        <h3>Mission</h3>
-        <p>Our mission at UNIK is to raise awareness about the capabilities and ongoing developments within the Stack blockchain. We aim to achieve this by executing a strategically planned campaign that introduces Stack to a broader audience, encouraging more individuals to engage with the ecosystem. Additionally, we are committed to supporting projects within the Stack ecosystem, helping them transform their ideas into reality.</p>
-        <h3>Vision</h3>
-        <p>We envision making Stack truly unique (UNIK) and superior to any other blockchain. Our goal is to create a wide array of utilities that will accelerate the growth of Stack more rapidly than ever before. By fostering innovation and providing tangible benefits, we aim to position Stack as a leading blockchain platform.</p>
-    </section>
-    <section id="nft-token-utility">
-        <h2>NFT and Token Utility</h2>
-        <p>Central to our project is the development of a groundbreaking game where NFTs serve as our game characters and token as earnings and in-game purchases and many more. Each NFT possesses unique powers and abilities that influence gameplay, making the game not only entertaining but also strategically engaging. Our P2E game is designed to reward players through allocated token airdrops, offering a lucrative incentive to participate even before the mainnet allocation is launched.</p>
-        <p>We plan to make at least two stages of P2E (Play 2 Earn). The first stage serves as a game where participants play to get some allocated airdrops and the other stage will serve as our actual gameplay where participants will earn by just playing games.</p>
-        <p>Beyond gaming, UNIK is committed to exploring additional utilities that will enhance the Stack blockchain. Following the Nakamoto upgrade, we plan to launch a trading bot specifically for Stack blockchains. This bot will provide advanced trading functionalities, further enriching the Stack ecosystem and offering users more ways to benefit from their participation.</p>
-    </section>
-    <section id="tokenomics">
-        <h2>Tokenomics</h2>
-        <ul>
-            <li>Presale (30%): 3,000,000,000 tokens are allocated for the initial sale to early investors.</li>
-            <li>Airdrop (10%): 1,000,000,000 tokens will be distributed for users who participate in our airdrop mini-game, socialfi, and hold some of our NFT collections.</li>
-            <li>Utility (5%): 500,000,000 tokens are designated for utility purposes within the ecosystem, to foster our utility development.</li>
-            <li>Farming (5%): 500,000,000 tokens will be used to incentivize users to participate in liquidity farming.</li>
-            <li>NFT Staking Reward (4%): 400,000,000 tokens are reserved as rewards for staking nonfungible tokens (NFTs). In the future, we are looking forward to making NFT staking platforms on our website to boost our NFT use cases.</li>
-            <li>Team (3%): 300,000,000 tokens are allocated to the project's team members for their commitment to making the project great and successful.</li>
-            <li>Locked Liquidity Pool (LP) (18%): 1,800,000,000 tokens are reserved to ensure liquidity on exchanges, which is locked for a specified period to build trust and stability.</li>
-            <li>Burn (10%): 1,000,000,000 tokens will be permanently removed from circulation to reduce supply and potentially increase token value.</li>
-            <li>Reserve Token (10%): 1,000,000,000 tokens are set aside for future use and CEX listing.</li>
-            <li>Marketing (5%): 500,000,000 tokens are allocated for promotional activities to increase awareness and adoption like contests, giveaways, and influencer promotions.</li>
-        </ul>
-        <p>Total supply: 10 billion</p>
-        <p>CA: SP3X27NM39MR9HM98D8PEWAHE420JK3X090S1382Q.Unik</p>
-    </section>
-    <section id="roadmap">
-        <h2>Roadmap</h2>
-        <h3>Q1</h3>
-        <ul>
-            <li>Social Media</li>
-            <li>First NFT MINT live</li>
-        </ul>
-    </section><section id="roadmap">
-        <h2>Roadmap</h2>
-        <h3>Q1</h3>
-        <ul>
-            <li>Social Media</li>
-            <li>First NFT MINT live</li>
-            <li>Whitepaper release</li>
-            <li>Website release</li>
-            <li>Collaboration and partnership</li>
-            <li>NFT mint finished</li>
-        </ul>
-        <h3>Q2</h3>
-        <ul>
-            <li>Airdrop game development</li>
-            <li>Goat socialfi</li>
-            <li>Second NFT mint live</li>
-            <li>Airdrop game launch</li>
-            <li>Second NFT finished</li>
-            <li>Collection of our partnership eligible airdrop</li>
-            <li>Presale</li>
-            <li>Presale concluded</li>
-        </ul>
-        <h3>Q3</h3>
-        <ul>
-            <li>Ambassadorship campaign</li>
-            <li>Airdrop, Socialfi and Presale Distribution</li>
-            <li>Token launch on all supported Stack DEX</li>
-            <li>CMC and CoinGecko listing</li>
-            <li>Contest (Meme, thread, and more contests)</li>
-            <li>Strategic CEX listing</li>
-        </ul>
-        <h3>Q4</h3>
-        <ul>
-            <li>P2E game in development</li>
-            <li>Marketing campaign begins</li>
-            <li>P2E game release</li>
-            <li>NFT staking launch</li>
-            <li>Additional use case and more utilities development to improve Stack</li>
-            <li>More partnerships and collaboration</li>
-            <li>Host offline/online events to onboard more people to Stack</li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2024 UNIK. All rights reserved.</p>
-    </footer>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <div class="arrow hidden" id="arrow1"></div>
+        <div class="step hidden" id="step2">
+            <img src="img-2.jpg" alt="">
+        </div>
+        <div class="arrow hidden" id="arrow2"></div>
+        <div class="step hidden" id="step3">
+            <img src="img-3.jpg" alt="">
+        </div>
+        <div class="arrow hidden" id="arrow3"></div>
+        <div class="step hidden" id="step4">
+            <img src="img-4.jpg" alt="">
+        </div>
+        <div class="arrow hidden" id="arrow4"></div>
+        <div class="step hidden" id="step5">
+            <img src="img-5.jpg" alt="Step 5">
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".hidden");
+
+            gsap.to(elements, {
+                opacity: 1,
+                duration: 1,
+                stagger: 0.5,
+                ease: "power1.out",
+                onComplete: function() {
+                    elements.forEach(el => el.classList.remove("hidden"));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
