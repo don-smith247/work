@@ -68,8 +68,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6" style="background-color: #fd7338; color: black;">
                         <div class="home-content home-heading">
-                            <h2  class="animated-text gh">
-                                <span>Unik</span>
+                            <div  class="animated-text gh">
+                                <h2 class="gh"> <span style="color: white;">UN</span><span>IK.</span></h2>
                                 <span>is</span>
                                 <span>a</span>
                                 <span>P2E</span>
@@ -78,7 +78,7 @@
                                 <span>on</span>
                                 <span>stack</span>
                                 <span>ecosystem.</span>
-                            </h2>
+                            </div>
                             <style>
                                 .animated-text {
                                     font-size: 2rem;
@@ -254,7 +254,7 @@
             }
            .ajaj{
             width: 350px;
-            height: 350px;
+            height: 300px;
             border: solid 1px black;
             border-radius: 5px;
            }
@@ -288,51 +288,121 @@
             </div>
             <style>
         
+        
+.tokenomics {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fd7338;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
 
-        .tokenomics-section {
-            background-color: #fd7338;
-            color: black;
-            padding: 50px 20px;
-            text-align: center;
-        }
+.tokenomics h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    font-family: "PT Serif", serif;
+}
 
-        .tokenomics-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
 
-        .tokenomics-title {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+.token-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: solid 1px black;
+}
 
-        .tokenomics-description {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            color: #333;
-        }
+.token-section h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-family: "PT Serif", serif;
+    font-weight: 800;
+}
 
-        .tokenomics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.token-section p {
+    color: #555;
+}
 
-    
+.total-supply {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
 
-        .total-supply {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-top: 40px;
-        }
-    </style>
+.total-supply h2 {
+    color: black;
+    font-family: "PT Serif", serif;
+}
+
+@media (max-width: 600px) {
+    .tokenomics {
+        padding: 10px;
+    }
+    .token-section {
+        padding: 10px;
+    }
+}
+            </style>
 </head>
 <body>
     <section class="tokenomics-section">
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;" class="tokenomics-container">
             <h1 class="gh">Tokenomics</h1>
-           <img class="ajaj" src="./img-2.jpg" alt="">
+           <img class="ajaj" src="./token.jpg" alt="">
+           <div class="tokenomics">
+            <div class="grid-container">
+                <div class="token-section">
+                    <h2>Presale (30%)</h2>
+                    <p>3,000,000,000 tokens are allocated for the initial sale to early investors.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Airdrop (10%)</h2>
+                    <p>1,000,000,000 tokens will be distributed for users who participate in our airdrop mini game, socialfi and hold some of our NFTs collections.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Utility (5%)</h2>
+                    <p>500,000,000 tokens are designated for utility purposes within the ecosystem, to foster our utilities development.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Farming (5%)</h2>
+                    <p>500,000,000 tokens will be used to incentivize users to participate in liquidity farming.</p>
+                </div>
+                <div class="token-section">
+                    <h2>NFT Staking Reward (4%)</h2>
+                    <p>400,000,000 tokens are reserved as rewards for staking non-fungible tokens (NFTs). Because in the future we are looking forward in making NFT staking platforms on our website to boost our NFT use cases.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Team (3%)</h2>
+                    <p>300,000,000 tokens are allocated to the project's team members for their commitment in making the project great and successful.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Locked Liquidity Pool (LP) (18%)</h2>
+                    <p>1,800,000,000 tokens are reserved to ensure liquidity on exchanges, which is locked for a specified period to build trust and stability.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Burn (10%)</h2>
+                    <p>1,000,000,000 tokens will be permanently removed from circulation to reduce supply and potentially increase token value.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Reserve Token (10%)</h2>
+                    <p>1,000,000,000 tokens are set aside for future use and Cex listing.</p>
+                </div>
+                <div class="token-section">
+                    <h2>Marketing (5%)</h2>
+                    <p>500,000,000 tokens are allocated for promotional activities to increase awareness and adoption like contest, giveaway, and influencer promotion.</p>
+                </div>
+            </div>
+            <div class="total-supply">
+                <h2 class="gh">Total Supply: 10 billion</h2>
+            </div>
+        </div>
         </div>
     </section>
    <section class="footer">
